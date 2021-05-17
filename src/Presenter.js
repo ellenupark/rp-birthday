@@ -11,7 +11,8 @@ const Presenter = () => {
     <ScrollContainer>
       <ScrollPage style={{backgroundColor: "pink"}}page={0}>
         <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
-          <span className='speech' style={{ fontSize: "3em" }}>Happy Birthday Rachel!!! 😀</span>
+            <span className='speech' style={{ fontSize: "3em" }}>Happy Birthday Rachel!!! 😀</span>
+            <span className='icon-scroll'></span>
         </Animator>
       </ScrollPage>
       <ScrollPage page={1}>
@@ -51,7 +52,7 @@ const Presenter = () => {
       <ScrollPage page={7}>
         <Animator animation={FadeUp} >
           <span className='speech' style={{ fontSize: "3em" }}>
-            Download 
+            Download artwork
             <a
               href={bdayImage}
               color="transparent"
