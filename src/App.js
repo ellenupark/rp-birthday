@@ -1,11 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import Presenter from './Presenter'
+import Lock from './Lock'
+import React, { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [locked, setLocked] = useState(true)
+
+  const handleSubmit = (code) => {
+    code.toLowerCase().trim() === 'kiki' && setLocked(false)
+  }
+
   return (
     <div className="App">
-      <Presenter />
+      {locked && (
+        <Lock handleSubmit={handleSubmit} />
+      )}
+      {!locked && (
+        <Presenter />
+      )}
     </div>
   );
 }

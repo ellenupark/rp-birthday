@@ -1,0 +1,55 @@
+.lock {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    font-size: 2em;
+    margin: 15px;
+}
+
+button{
+    background: #ffa3b5;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:60px;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button:hover{
+    background:#fff;
+    color:rgb(255, 139, 158);
+}
+
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: rgb(231, 124, 142);
+    transition:400ms ease all;
+}
+  
+button:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+  
+button:hover:before,button:hover:after{
+    width:100%;
+    transition:800ms ease all;
+}
+  
